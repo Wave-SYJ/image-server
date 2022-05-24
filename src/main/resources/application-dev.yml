@@ -1,0 +1,15 @@
+quarkus:
+  log:
+    file:
+      enable: false
+minio:
+  connection:
+    use-ssl: false
+    host: localhost
+    port: 9000
+    access-key: root
+    secret-key: password
+  bucket:
+    image: image
+app:
+  password: app-password

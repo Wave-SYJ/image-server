@@ -1,0 +1,22 @@
+minio:
+  connection:
+    use-ssl: false
+    host: localhost
+    port: 9000
+    access-key: root
+    secret-key:                         # Set your secret key here
+  bucket:
+    image: image
+quarkus:
+  http:
+    auth:
+      proactive: false
+    insecure-requests: disabled
+    ssl-port: 5450
+    ssl:
+      certificate:                      # Set your SSL configuration here
+        key-store-file:
+        key-store-file-type:
+        key-store-password:
+app:
+  password:                             # Set your app password here.

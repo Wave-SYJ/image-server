@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+
+  minio:
+    image: bitnami/minio:2022
+    ports:
+      - '9000:9000'
+      - '9001:9001'
+    volumes:
+      - './minio_data_dev:/data'
+    environment:
+      - MINIO_ROOT_USER=root
+      - MINIO_ROOT_PASSWORD=    # Set your password here
+      - MINIO_DEFAULT_BUCKETS=image

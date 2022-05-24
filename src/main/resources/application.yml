@@ -1,0 +1,16 @@
+quarkus:
+  http:
+    access-log:
+      enabled: true
+      pattern: "%{RESPONSE_CODE} %{METHOD} %{REQUEST_URL} %{RESPONSE_TIME}ms %{REMOTE_IP}"
+    record-request-start-time: true
+    port: 5450
+  console:
+    color: true
+  log:
+    file:
+      enable: true
+      rotation:
+        max-file-size: 10M
+        max-backup-index: 100
+      path: logs/quarkus.log
