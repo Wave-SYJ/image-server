@@ -77,6 +77,7 @@ public class ImageResource {
         imageRepository.uploadImage(image.uploadedFile().toString(), savePath, mimeType);
         log.info(String.format("Save image %s (%s)", savePath, mimeType));
         return new JsonObject()
+                .put("savePath", savePath)
                 .put("path", "/image" + savePath)
                 .put("contentType", mimeType);
     }
